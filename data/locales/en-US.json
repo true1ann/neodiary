@@ -1,0 +1,17 @@
+{
+    "TESTSTRING": "Test test abc 123",
+    "LOADING_MESSAGE": "Loading, please wait..",
+    "WAITING_FOR_JAVASCRIPT": "Waiting for JavaScript...",
+    "MODAL_WARNING": "Hold up!",
+    "ERROR_MESSAGE": "oh.",
+    "HEADER_STANDART": "The diary",
+    "SCREEN_HABITS": "Habits",
+    "SCREEN_JOURNAL": "Journal",
+    "SCREEN_NOTES": "Notes",
+    "SCREEN_PROGRESSES": "Progresses",
+    "SCREEN_TODOS": "To-Dos",
+    "SCREEN_SETTINGS": "Settings",
+    "SCREEN_PLUGINS": "Plugins",
+    "SCREEN_THEMES": "Themes",
+    "SCREEN_ADDONSTORE": "Addon store"
+}

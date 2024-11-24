@@ -1,0 +1,17 @@
+{
+    "TESTSTRING": "Тест тест тес абв 123",
+    "LOADING_MESSAGE": "Загрузка, пожайлуста подождите..",
+    "WAITING_FOR_JAVASCRIPT": "Ожидание JavaScript...",
+    "MODAL_WARNING": "Погоди-ка!",
+    "ERROR_MESSAGE": "ох.",
+    "HEADER_STANDART": "Дневник",
+    "SCREEN_HABITS": "Привычки",
+    "SCREEN_JOURNAL": "Журнал",
+    "SCREEN_NOTES": "Заметки",
+    "SCREEN_PROGRESSES": "Прогрессы",
+    "SCREEN_TODOS": "Список дел",
+    "SCREEN_SETTINGS": "Настройки",
+    "SCREEN_PLUGINS": "Плагины",
+    "SCREEN_THEMES": "Темы",
+    "SCREEN_ADDONSTORE": "Магазин дополнений"
+}

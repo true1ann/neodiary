@@ -1,0 +1,38 @@
+{
+    "habits.js": [
+        "SCREEN_HABITS",
+        "rule"
+    ],
+    "journals.js": [
+        "SCREEN_JOURNAL",
+        "book"
+    ],
+    "notes.js": [
+        "SCREEN_NOTES",
+        "edit"
+    ],
+    "progresses.js": [
+        "SCREEN_PROGRESSES",
+        "task_alt"
+    ],
+    "todos.js": [
+        "SCREEN_TODOS",
+        "task_alt"
+    ],
+    "settings.js": [
+        "SCREEN_SETTINGS",
+        "settings"
+    ],
+    "plugins.js": [
+        "SCREEN_PLUGINS",
+        "build"
+    ],
+    "themes.js": [
+        "SCREEN_THEMES",
+        "format_paint"
+    ],
+    "addon-store.js": [
+        "SCREEN_ADDONSTORE",
+        "storefront"
+    ]
+}

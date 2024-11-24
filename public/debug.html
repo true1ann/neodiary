@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP UI TESTING PAGE</title>
+    <link href="api/data/themes/app.css" rel="stylesheet">
+    <script src="updaters.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="app-habit-card">
+            <div class="title">Habit</div>
+            <div class="action pos"><span class="material-icons">add</span></div>
+            <div class="action neg"><span class="material-icons">remove</span></div>
+        </div>
+        <div class="app-habit-card">
+            <div class="action neg"><span class="material-icons">remove</span></div>
+            <div class="action pos"><span class="material-icons">add</span></div>
+            <div class="title">Habit</div>
+        </div>
+        <div class="app-habit-card">
+            <div class="action neg"><span class="material-icons">remove</span></div>
+            <div class="title">Habit</div>
+            <div class="action pos"><span class="material-icons">add</span></div>
+        </div>
+        <div class="app-habit-card">
+            <div class="action neg"><span class="material-icons">remove</span></div>
+            <div class="title">Habit</div>
+        </div>
+        <div class="app-habit-card">
+            <div class="title">Habit</div>
+            <div class="action pos"><span class="material-icons">add</span></div>
+        </div>
+    </div>
+    <div class="app-notes-container">
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">💡</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Idea for a new project: AI-based diary app</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">🚀</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Launch new feature tomorrow! Get ready for the update!</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">📝</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Write blog post on how to integrate i18n with Express</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">🔥</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Urgent: Fix bug in plugin loader causing crashes!</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">🌿</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Buy new plants for the office</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">🍕</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Order pizza for lunch today, extra cheese!</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">⚡</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Work on speeding up API response times</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">🗓️</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Meeting with the team at 3 PM</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">🎉</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Celebrate 2 years at the company today!</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">📚</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Read chapter 5 of "Clean Code"</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">💼</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Prepare slides for tomorrow’s presentation</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">🖥️</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Fix the layout issue on the homepage</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">💪</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Workout: chest and arms today</div>
+        </div>
+        <div class="app-notes-card">
+            <div class="info">
+                <div class="tag">🎨</div>
+                <span class="material-icons actions">more_vert</span>
+            </div>
+            <div class="text">Design new logo for the brand</div>
+        </div>
+    </div>
+    <div>
+        <div class="app-progress-card">
+            <div class="text">My progress</div>
+            <input type="range" min="0" max="100" value="0">
+        </div>
+        <div class="app-progress-card">
+            <div class="text">My progress</div>
+            <input type="range" min="0" max="100" value="50">
+        </div>
+        <div class="app-progress-card">
+            <div class="text">My progress</div>
+            <input type="range" min="0" max="100" value="100">
+        </div>
+    </div>
+    <div class="app-progress-card">
+        <div class="text">My progress</div>
+        <input type="checkbox" checked>
+    </div>
+    <div class="app-progress-card">
+        <div class="text">My progress</div>
+        <input type="checkbox">
+    </div>
+    <label class="app-ui-switch">
+        <input type="checkbox" class="toggle" checked>
+        <span class="label"></span>
+    </label>
+    <label class="app-ui-switch">
+        <input type="checkbox" class="toggle">
+        <span class="label"></span>
+    </label><br>
+    <button type="button" class="app-ui-button danger" onclick="createRipple(event)">Delete</button>
+    <button type="button" class="app-ui-button primary" onclick="createRipple(event)">Primary button</button>
+    <button type="button" class="app-ui-button secondary" onclick="createRipple(event)">Secondary button</button>
+    <button type="button" class="app-ui-button teritary" onclick="createRipple(event)">Teritary button</button>
+    <button type="button" class="app-ui-button" onclick="createRipple(event)" disabled>Inactive button</button>
+    <div class="app-ui-modale">
+        <h1 class="app-header h1">Create a Journal entry</h1>
+        <div class="actions horiz">
+            <input class="app-ui-tinput" type="text" placeholder="Enter a name for your Journal entry">
+            <button type="button" class="app-ui-button primary">Create</button>
+        </div>
+
+    </div>
+    <input class="app-ui-tinput" type="text" placeholder="testtesttest">
+    <input class="app-ui-tinput" type="text" value="i am disabled" disabled>
+    <input class="app-ui-tinput" type="text" size="40" value="bigger text input">
+    <textarea class="app-ui-tinput" placeholder="i am a text area" rows="2" cols="20"></textarea>
+    <textarea class="app-ui-tinput" value="i am a disabled text area" rows="2" cols="20" disabled></textarea>
+    <div id="sidebar">
+        <button type="button" onclick="createRipple(event); changeActiveMenu(event)" class="active">
+            <span class="material-icons">edit</span>
+            <span class="text">This is the current menu</span>
+        </button>
+        <button type="button" onclick="createRipple(event); changeActiveMenu(event)">
+            <span class="material-icons">settings</span>
+            <span class="text">This is a menu</span>
+        </button>
+        <button type="button" onclick="createRipple(event); changeActiveMenu(event)">
+            <span class="material-icons">face</span>
+            <span class="text">This is another menu</span>
+        </button>
+    </div>
+    <div id="bottom-dock">
+        <button type="button" onclick="createRipple(event)">
+            <span class="material-icons">face</span>
+            <span class="text">This is a primary option</span>
+        </button>
+
+        <button type="button" class="secondary" onclick="createRipple(event)">
+            <span class="material-icons">face</span>
+            <span class="text">This is a secondary option</span>
+        </button>
+
+        <button type="button" disabled onclick="createRipple(event)">
+            <span class="material-icons">face</span>
+            <span class="text">I am a disabled option</span>
+        </button>
+
+        <button type="button" class="danger" onclick="createRipple(event)">
+            <span class="material-icons">delete</span>
+            <span class="text">I am a DESTRUCTIVE option</span>
+        </button>
+    </div>
+    <div id="blurdiv"></div>
+</body>
+
+</html>

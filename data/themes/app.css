@@ -1,0 +1,698 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    src: url(/icons/MaterialIcons-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+:root {
+    --app-ui-background-color: rgb(0, 0, 0);
+    --app-ui-text-color: rgb(255, 255, 255);
+    --app-ui-card-color: #1e1e1e;
+    --app-ui-accent-color: #506fa5;
+    --app-ui-alt-accent-color: rgb(96, 99, 143);
+    --app-ui-bad-color: #c0476a;
+    --app-ui-inactive-color: rgb(39, 40, 53);
+    --app-ui-inactive-text-color: rgb(200, 200, 200);
+    --app-ui-roundness: 20px;
+    --app-ui-alt-roundness: 5px;
+    --app-ui-shadow: 0 2px 5px rgb(0, 0, 0);
+    --app-ui-slider-thumb-color: var(--app-ui-accent-color);
+    --app-ui-slider-track-color: #5e5e5e;
+    --app-ui-switch-background: var(--app-ui-slider-track-color);
+    --app-ui-switch-active-background: var(--app-ui-accent-color);
+    --app-ui-padding: 15px;
+    --app-ui-alt-padding: 10px;
+    --app-ui-margin: 10px;
+    --app-ui-alt-margin: 5px;
+    --app-ui-border-size: 2px;
+    --app-ui-blur-size: 24px;
+    --app-ui-blur-dim: 0.75;
+    --app-ui-alt-blur-size: 12px;
+    --app-ui-alt-blur-dim: 0.5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--app-ui-background-color);
+    color: var(--app-ui-text-color);
+    font-family: 'Roboto';
+    background: repeating-linear-gradient(45deg, #000 0, #000 25px, #9c84c1 25px, #9c84c1 50px);
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+#main-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+#bottom-dock {
+    position: fixed;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    transition: bottom 0.3s ease;
+    z-index: 11;
+    border-radius: var(--app-ui-roundness) var(--app-ui-roundness) 0 0;
+}
+
+#bottom-dock.open {
+    bottom: 0;
+}
+
+#sidebar {
+    position: fixed;
+    left: -75%;
+    top: 0;
+    width: 75%;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 11;
+    border-radius: 0 var(--app-ui-roundness) var(--app-ui-roundness) 0;
+}
+
+#sidebar.open {
+    left: 0;
+}
+
+#sidebar,
+#bottom-dock {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--app-ui-card-color);
+    color: var(--app-ui-text-color);
+}
+
+#sidebar button,
+#bottom-dock button {
+    position: relative;
+    border: none;
+    border: var(--app-ui-border-size) solid var(--app-ui-accent-color);
+    background-color: var(--app-ui-accent-color);
+    color: var(--app-ui-text-color);
+    margin: var(--app-ui-margin);
+    padding: var(--app-ui-alt-padding);
+    border-radius: var(--app-ui-roundness);
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar button,
+#bottom-dock button {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background-color: var(--app-ui-accent-color);
+    color: var(--app-ui-text-color);
+    margin: var(--app-ui-margin);
+    padding: var(--app-ui-alt-padding);
+    border-radius: var(--app-ui-roundness);
+    display: flex;
+    align-items: center;
+    transition-duration: 0.3s;
+}
+
+#sidebar button .material-icons,
+#bottom-dock button .material-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+#sidebar button .text,
+#bottom-dock button .text {
+    display: flex;
+    align-items: center;
+}
+
+#sidebar button:disabled,
+#bottom-dock button:disabled {
+    background-color: var(--app-ui-inactive-color);
+    color: var(--app-ui-inactive-text-color);
+}
+
+#bottom-dock button.secondary {
+    background-color: var(--app-ui-alt-accent-color);
+    color: var(--app-ui-text-color);
+}
+
+#bottom-dock button.danger {
+    background-color: var(--app-ui-bad-color);
+    color: var(--app-ui-text-color);
+}
+
+#sidebar button {
+    border: var(--app-ui-border-size) solid var(--app-ui-accent-color);
+    background-color: transparent;
+}
+
+#sidebar button.active {
+    background-color: var(--app-ui-accent-color);
+    margin-left: 0;
+    border-radius: 0 var(--app-ui-roundness) var(--app-ui-roundness) 0;
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--app-ui-background-color);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#header {
+    order: 1;
+    flex-grow: 0;
+    padding: var(--app-ui-padding);
+    background-color: var(--app-ui-card-color);
+    display: flex;
+}
+
+#header .material-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+#header .text {
+    display: flex;
+    align-items: center;
+}
+
+#app-iframe {
+    border: none;
+    order: 2;
+    flex-grow: 1;
+}
+
+#blurdiv {
+    transition-duration: 0.3s;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+}
+
+#blurdiv.none {
+    backdrop-filter: blur(0px);
+    background-color: rgba(0, 0, 0, 0.0);
+    pointer-events: none;
+}
+
+#blurdiv.active {
+    backdrop-filter: blur(var(--app-ui-blur-size));
+    background-color: rgba(0, 0, 0, var(--app-ui-blur-dim));
+    pointer-events: all;
+}
+
+#blurdiv.active.alt {
+    backdrop-filter: blur(var(--app-ui-alt-blur-size));
+    background-color: rgba(0, 0, 0, var(--app-ui-alt-blur-dim));
+    pointer-events: all;
+}
+
+.app-header.h1,
+.app-header.h2,
+.app-header.h3,
+.app-header.h4,
+.app-header.h5,
+.app-header.h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.app-habit-card {
+    display: flex;
+    align-items: stretch;
+    border-radius: var(--app-ui-roundness);
+    background-color: var(--app-ui-card-color);
+    margin: var(--app-ui-margin);
+    box-shadow: var(--app-ui-shadow);
+}
+
+.app-habit-card .title {
+    flex: 1;
+    text-align: center;
+    padding: var(--app-ui-padding);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.app-habit-card .action {
+    width: 12%;
+    text-align: center;
+    padding: var(--app-ui-padding);
+    color: var(--app-ui-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-habit-card .action.neg {
+    background-color: var(--app-ui-bad-color);
+}
+
+.app-habit-card .action.pos {
+    background-color: var(--app-ui-accent-color);
+}
+
+.app-habit-card .action:first-child {
+    border-top-left-radius: var(--app-ui-roundness);
+    border-bottom-left-radius: var(--app-ui-roundness);
+}
+
+.app-habit-card .action:last-child {
+    border-top-right-radius: var(--app-ui-roundness);
+    border-bottom-right-radius: var(--app-ui-roundness);
+}
+
+.app-notes-container {
+    padding: var(--app-ui-margin);
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.app-notes-card {
+    background-color: var(--app-ui-card-color);
+    border-radius: var(--app-ui-roundness);
+    padding: var(--app-ui-padding);
+    box-shadow: var(--app-ui-shadow);
+    box-sizing: border-box;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.app-notes-card .info {
+    float: right;
+    margin-left: var(--app-ui-alt-margin);
+    display: flex;
+    align-items: center;
+    gap: var(--app-ui-alt-padding);
+    background-color: var(--app-ui-accent-color);
+    border-radius: var(--app-ui-roundness);
+    padding: var(--app-ui-alt-padding);
+}
+
+.app-notes-card .tag,
+.app-notes-card .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--app-ui-text-color);
+    flex-shrink: 0;
+}
+
+.app-notes-card .tag {
+    font-size: 16px;
+}
+
+.app-notes-card .text {
+    white-space: normal;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.app-progress-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--app-ui-roundness);
+    background-color: var(--app-ui-card-color);
+    margin: var(--app-ui-margin);
+    padding: var(--app-ui-padding);
+    box-shadow: var(--app-ui-shadow);
+}
+
+.app-progress-card .text {
+    flex: 1;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--app-ui-text-color);
+}
+
+.app-progress-card input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--app-ui-accent-color);
+    border-radius: var(--app-ui-alt-roundness);
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.app-progress-card input[type="checkbox"]:checked {
+    background-color: var(--app-ui-accent-color);
+    border-color: var(--app-ui-accent-color);
+}
+
+.app-progress-card input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--app-ui-background-color);
+    clip-path: polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%);
+}
+
+.app-progress-card input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 8px;
+    background: linear-gradient(to right,
+            var(--app-ui-slider-thumb-color) 0%,
+            var(--app-ui-slider-thumb-color) var(--slider-value, 50%),
+            var(--app-ui-slider-track-color) var(--slider-value, 50%),
+            var(--app-ui-slider-track-color) 100%);
+    border-radius: var(--app-ui-alt-roundness);
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+.app-progress-card input[type="range"]:focus {
+    outline: none;
+}
+
+.app-progress-card input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--app-ui-slider-thumb-color);
+    border: none;
+    border-radius: var(--app-ui-roundness);
+    cursor: pointer;
+}
+
+.app-progress-card input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--app-ui-slider-thumb-color);
+    border: none;
+    border-radius: var(--app-ui-roundness);
+    cursor: pointer;
+}
+
+.app-progress-card input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--app-ui-slider-thumb-color);
+    border: none;
+    border-radius: var(--app-ui-roundness);
+    cursor: pointer;
+}
+
+
+.app-ui-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: var(--app-ui-margin)
+}
+
+.app-ui-switch .toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.app-ui-switch .label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--app-ui-switch-background);
+    border-radius: var(--app-ui-roundness);
+    transition: background-color 0.2s ease;
+}
+
+.app-ui-switch .label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--app-ui-background-color);
+    border-radius: var(--app-ui-roundness);
+    transition: transform 0.2s ease;
+}
+
+.app-ui-switch .toggle:checked+.label {
+    background-color: var(--app-ui-switch-active-background);
+}
+
+.app-ui-switch .toggle:checked+.label:before {
+    transform: translateX(25px);
+    mask-image: polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%);
+}
+
+.app-ui-tinput {
+    padding: var(--app-ui-padding);
+    margin: var(--app-ui-margin);
+    border: var(--app-ui-border-size) solid var(--app-ui-alt-accent-color);
+    border-radius: var(--app-ui-alt-roundness);
+    background-color: transparent;
+    color: var(--app-ui-text-color);
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.app-ui-tinput:focus {
+    outline: none;
+}
+
+.app-ui-tinput::placeholder {
+    color: var(--app-ui-alt-accent-color);
+    font-style: italic;
+}
+
+.app-ui-tinput:disabled {
+    color: var(--app-ui-inactive-text-color);
+    border-color: var(--app-ui-inactive-color);
+}
+
+.app-ui-tinput:invalid {
+    border-color: var(--app-ui-bad-color);
+}
+
+.app-ui-button {
+    background-color: transparent;
+    border: none;
+    border-radius: var(--app-ui-roundness);
+    color: var(--app-ui-text-color);
+    margin: var(--app-ui-margin);
+    padding: var(--app-ui-padding);
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-ui-button.danger {
+    background-color: var(--app-ui-bad-color);
+}
+
+.app-ui-button.primary {
+    background-color: var(--app-ui-accent-color);
+}
+
+.app-ui-button.secondary {
+    background-color: var(--app-ui-alt-accent-color);
+}
+
+.app-ui-button.teritary {
+    border: var(--app-ui-border-size) solid var(--app-ui-accent-color);
+}
+
+.app-ui-button:disabled {
+    background-color: var(--app-ui-inactive-color);
+    color: var(--app-ui-inactive-text-color);
+}
+
+.app-ui-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    background-color: var(--app-ui-card-color);
+    border-radius: var(--app-ui-roundness);
+    padding: var(--app-ui-padding);
+    gap: var(--app-ui-margin);
+    width: max-content;
+    max-width: 75%;
+    z-index: 12;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.app-ui-modal .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: var(--app-ui-margin);
+}
+
+.app-ui-modal .actions.horiz {
+    flex-direction: column;
+}
+
+.app-ui-modal .actions * {
+    margin: 0;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+}
+
+.ripple-danger {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
